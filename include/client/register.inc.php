@@ -29,7 +29,7 @@ $info = Format::htmlchars(($errors && $_POST)?$_POST:$info);
     $cf = $user_form ?: UserForm::getInstance();
     $cf->render(array('staff' => false, 'mode' => 'create'));
 ?>
-<tr>
+<tr hidden>
     <td colspan="2">
         <div><hr><h3><?php echo __('Preferences'); ?></h3>
         </div>
