@@ -35,7 +35,7 @@ $info = Format::htmlchars(($errors && $_POST)?$_POST:$info);
         </div>
     </td>
 </tr>
-    <tr>
+    <tr hidden>
         <td width="180">
             <?php echo __('Time Zone');?>:
         </td>
