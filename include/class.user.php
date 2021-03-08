@@ -315,6 +315,12 @@ implements TemplateVariable, Searchable {
             if ($a = $e->getAnswer('phone'))
                 return $a;
     }
+    
+    function getStudentID() {
+        foreach ($this->getDynamicData() as $e)
+            if ($a = $e->getAnswer('student_id'))
+                return $a;
+    }
 
     function getName() {
         if (!$this->name)

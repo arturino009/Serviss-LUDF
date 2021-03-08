@@ -20,7 +20,7 @@ if ($acct = $thisclient->getAccount()) {
         </div>
     </td>
 </tr>
-    <tr>
+    <tr hidden>
         <td width="180">
             <?php echo __('Time Zone');?>:
         </td>
@@ -33,7 +33,7 @@ if ($acct = $thisclient->getAccount()) {
         </td>
     </tr>
 <?php if ($cfg->getSecondaryLanguages()) { ?>
-    <tr>
+    <tr hidden>
         <td width="180">
             <?php echo __('Preferred Language'); ?>:
         </td>

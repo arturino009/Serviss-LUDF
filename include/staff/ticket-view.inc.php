@@ -441,6 +441,10 @@ if($ticket->isOverdue())
                     </td>
                 </tr>
                 <tr>
+                    <th><?php echo __('Student ID'); ?>:</th>
+                    <td><?php echo $ticket->getStudentID(); ?></td>
+                </tr>
+                <tr>
                     <th><?php echo __('Email'); ?>:</th>
                     <td>
                         <span id="user-<?php echo $ticket->getOwnerId(); ?>-email"><?php echo $ticket->getEmail(); ?></span>
@@ -1012,8 +1016,8 @@ if ($errors['err'] && isset($_POST['a'])) {
                   <div>
                     <select id="cannedResp" name="cannedResp">
                         <option value="0" selected="selected"><?php echo __('Select a canned response');?></option>
-                        <option value='original'><?php echo __('Original Message'); ?></option>
-                        <option value='lastmessage'><?php echo __('Last Message'); ?></option>
+                        <!-- <option value='original'><?php echo __('Original Message'); ?></option>
+                        <option value='lastmessage'><?php echo __('Last Message'); ?></option> -->
                         <?php
                         if(($cannedResponses=Canned::responsesByDeptId($ticket->getDeptId()))) {
                             echo '<option value="0" disabled="disabled">

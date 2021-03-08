@@ -638,6 +638,10 @@ implements RestrictedAccess, Threadable, Searchable {
         return (string)$this->getOwner()->getPhoneNumber();
     }
 
+    function getStudentID() {
+        return (string)$this->getOwner()->getStudentID();
+    }
+
     function getSource() {
         $sources = $this->getSources();
         return $sources[$this->source] ?: $this->source;
